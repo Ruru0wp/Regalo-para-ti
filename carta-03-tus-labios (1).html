@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe8f0">
+<title>Una cartita para ti · Carta 3 💗</title>
+<style>
+:root{--pink:#f4a6c4;--pink2:#ffdce9;--rose:#b84f79;--ink:#59394a;--paper:#fffafc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 12px;display:flex;align-items:center;justify-content:center;overflow-x:hidden;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 12% 20%,#fff 0 2px,transparent 3px),radial-gradient(circle at 83% 16%,#fff 0 2px,transparent 3px),radial-gradient(circle at 78% 80%,#fff9 0 2px,transparent 3px),linear-gradient(145deg,#fff2f7,#f8d6e5 55%,#fcecf3);background-size:130px 130px,170px 170px,150px 150px,auto}
+.sparkle{position:fixed;pointer-events:none;color:#d77da0;opacity:.65;animation:twinkle 3s ease-in-out infinite}
+.s1{top:8%;left:9%}.s2{top:17%;right:10%;animation-delay:1s}.s3{bottom:12%;left:13%;animation-delay:1.8s}.s4{bottom:8%;right:12%;animation-delay:.5s}
+@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0);opacity:.35}50%{transform:scale(1.2) rotate(20deg);opacity:.9}}
+.stage{width:min(760px,100%);text-align:center}
+.intro{margin:0 0 18px;color:#a7426c;font-size:clamp(1.5rem,5vw,2.15rem);font-weight:normal}
+.hint{margin:0 0 24px;color:#986078;font-size:1rem}
+.envelope-button{display:block;width:min(360px,88vw);height:245px;margin:0 auto 24px;position:relative;border:0;background:transparent;cursor:pointer;perspective:900px;filter:drop-shadow(0 14px 18px #b75b8125);transition:transform .25s}
+.envelope-button:hover{transform:translateY(-4px)}
+.envelope{position:absolute;inset:48px 0 0;height:190px;background:#f8b9d0;border-radius:8px 8px 14px 14px;overflow:visible}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#f9c8da,#ee9fbd);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px 8px 14px 14px}
+.flap{position:absolute;z-index:4;left:0;right:0;top:48px;height:112px;background:#fbd0df;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .85s cubic-bezier(.2,.75,.2,1);filter:drop-shadow(0 3px 2px #c66b8c22)}
+.letter-peek{position:absolute;z-index:2;left:7%;width:86%;height:160px;top:30px;padding:17px 10px;background:#fffafc;border-radius:5px;box-shadow:0 3px 8px #a54e7020;transition:transform .85s cubic-bezier(.2,.75,.2,1),top .85s;display:flex;align-items:center;justify-content:center;color:#c45e88;font-size:1rem;font-style:italic}
+.front-heart{position:absolute;z-index:5;left:50%;top:108px;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#fff0f6;color:#c74e80;font-size:29px;box-shadow:0 3px 10px #b95a7c25;transition:opacity .3s,transform .3s}
+.envelope-button.opening .flap{transform:rotateX(180deg);z-index:1}
+.envelope-button.opening .letter-peek{top:-5px;transform:translateY(-80px);z-index:6}
+.envelope-button.opening .front-heart{opacity:0;transform:translateX(-50%) scale(.5)}
+.envelope-button:focus-visible{outline:3px solid #b84f79;outline-offset:8px;border-radius:14px}
+.opened-card{display:none;text-align:left;padding:clamp(23px,5vw,48px);border:1px solid #b84f7930;border-radius:22px;background:var(--paper);box-shadow:0 18px 55px #8e436220;animation:appear .9s ease both}
+.opened-card.visible{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+.date,.reason,.card-title,.signature,.ornament,.heart{text-align:center}
+.date{color:var(--rose);letter-spacing:.12em;text-transform:uppercase;font:700 .78rem/1.5 Arial,sans-serif}
+.card-title{margin:12px 0 8px;font-size:clamp(1.7rem,5vw,2.45rem);font-weight:normal;color:#a7426c;line-height:1.2}
+.reason{margin:0 0 27px;color:#b35d80;font-style:italic}
+.ornament{margin-bottom:26px;color:#d889a9;letter-spacing:.45em}
+.opened-card p{margin:0 0 1.1em;font-size:clamp(1.01rem,2.5vw,1.1rem);line-height:1.9}
+.signature{margin-top:28px;color:#a7426c;font-size:1.06rem;line-height:1.8;font-style:italic}
+.heart{margin-top:22px;color:#d66d98;font-size:1.35rem;letter-spacing:.35em}
+.again{display:block;margin:20px auto 0;border:1px solid #d98bab;border-radius:999px;background:#fff7fa;color:#a7426c;padding:10px 17px;font-size:.95rem;cursor:pointer}
+.again:hover{background:#ffe8f0}
+.hidden{display:none!important}
+@media(max-width:480px){body{padding:16px 9px}.envelope-button{height:225px}.envelope{height:174px}.flap{height:103px}.letter-peek{height:146px}.opened-card{border-radius:17px}.opened-card p{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="sparkle s1">✧</div><div class="sparkle s2">✦</div><div class="sparkle s3">✧</div><div class="sparkle s4">✦</div>
+<main class="stage">
+  <section id="cover">
+    <h1 class="intro">Hay una cartita para ti, mi amor 💌</h1>
+    <p class="hint">La escribí pensando en ti. Toca el sobre para abrirla. ♡</p>
+    <button class="envelope-button" id="openLetter" aria-label="Abrir la carta" aria-expanded="false">
+      <span class="envelope">
+        <span class="letter-peek">Un pedacito de mi corazón<br>escrito para ti… ♡</span>
+      </span>
+      <span class="flap"></span>
+      <span class="front-heart">♥</span>
+    </button>
+    <p class="hint" id="littleHint">Con todo mi amor, para mi bubu. 🌷</p>
+  </section>
+
+  <article class="opened-card" id="letterContent">
+    <div class="date">13 de octubre</div>
+    <h2 class="card-title">Tus labios 💋</h2>
+    <div class="reason">Tercera cartita: una de las muchas maravillas de ti ♡</div>
+    <div class="ornament">✧ ♡ ✧</div>
+    <p>Hola, amorcito.</p>
+    <p>En la carta del día de hoy te hablaré de una de las muchas maravillas que hay en ti. Hoy, tus labios.</p>
+    <p>El día de hoy, mientras estuvimos en llamada, no pude dejar de contemplar esos hermosos labios, la forma tan sexy y cautivante con la que te mordías los labios y cómo se movían al hablar. Era como si me suplicaran por besarlos apasionadamente y nunca dejarlos ir.</p>
+    <p>Verlos es tan adictivo para mí, pues despierta en mí una necesidad de sentirlos, de tocarlos y de saborearlos como un manjar hecho por las manos de Dios. Un deseo tan intenso y profundo que todo mi cuerpo reacciona al unísono, atrayendo todos mis sentidos hacia ellos, como las abejas a la miel.</p>
+    <p>Verlos decir «te amo» es una experiencia fuera de este mundo, rozando fuertemente lo divino. Hay algo en la forma en que tus labios pronuncian esas palabras que hace que mi corazón se derrita y se llene de una felicidad difícil de expresar solo con palabras. Porque no se trata solamente de escucharte decir que me amas, sino de poder apreciarte mientras lo haces, de observar tus gestos y de imaginar toda la dulzura que hay detrás de cada palabra.</p>
+    <p>Me apasiona ver cómo juegas con tus labios cuando estás nerviosa, cómo se amoldan a tu rostro cuando estás enojadita y haces ese pucherito tan tuyo. Son detalles pequeños, pero que para mí tienen un valor inmenso. Me encanta descubrir esas pequeñas expresiones que te hacen ser tú, esas cositas que haces sin darte cuenta y que consiguen enamorarme locamente de ti.</p>
+    <p>Soñar despierto con esos labios besándome lentamente es algo que hago cada día, algo que mi mente hace en automático cuando te veo. Basta con tenerte frente a mí, aunque sea a través de una pantalla, para que mi imaginación se dé un festín y se ponga a fantasear con cómo sería tenerte aquí, solo para mí, poder mirarte a los ojos y acercarme despacito para comerte a besos.</p>
+    <p>Si algo tengo muy claro, es que no me canso de admirarte. Siempre encuentro algún detalle nuevo que me hace pensar que realmente eres una semidiosa en la Tierra, me hace sentirme tan afortunado de que seas para mí así como yo soy solo para ti. Hoy fueron tus labios, pero hay muchas más cositas dentro de tu belleza que deseo dar a conocer y explicar por qué me tienen tan perdidamente enamorado.</p>
+    <p>Y así concluye la tercera cartita para ti. Sé que es corta, pero en cada frase está condensado todo el amor que siento por ti.</p>
+    <div class="signature">Att.: Tu niño. ❤️</div>
+    <div class="heart">♡ ✧ ♡</div>
+    <button class="again" id="closeLetter">Volver a ver el sobre 💌</button>
+  </article>
+</main>
+<script>
+const cover = document.getElementById('cover');
+const opener = document.getElementById('openLetter');
+const content = document.getElementById('letterContent');
+const hint = document.getElementById('littleHint');
+let isOpen = false;
+opener.addEventListener('click', () => {
+  if (isOpen) return;
+  isOpen = true;
+  opener.classList.add('opening');
+  opener.setAttribute('aria-expanded', 'true');
+  hint.textContent = 'Abriendo una cartita hecha con amor… ♡';
+  window.setTimeout(() => {
+    cover.classList.add('hidden');
+    content.classList.add('visible');
+    content.scrollIntoView({behavior:'smooth',block:'start'});
+  }, 950);
+});
+document.getElementById('closeLetter').addEventListener('click', () => {
+  content.classList.remove('visible');
+  cover.classList.remove('hidden');
+  opener.classList.remove('opening');
+  opener.setAttribute('aria-expanded', 'false');
+  hint.textContent = 'Con todo mi amor, para mi bubu. 🌷';
+  isOpen = false;
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

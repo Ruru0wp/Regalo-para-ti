@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe8f0">
+<title>Una cartita para ti · Carta 4 💗</title>
+<style>
+:root{--pink:#f4a6c4;--pink2:#ffdce9;--rose:#b84f79;--ink:#59394a;--paper:#fffafc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 12px;display:flex;align-items:center;justify-content:center;overflow-x:hidden;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 12% 20%,#fff 0 2px,transparent 3px),radial-gradient(circle at 83% 16%,#fff 0 2px,transparent 3px),radial-gradient(circle at 78% 80%,#fff9 0 2px,transparent 3px),linear-gradient(145deg,#fff2f7,#f8d6e5 55%,#fcecf3);background-size:130px 130px,170px 170px,150px 150px,auto}
+.sparkle{position:fixed;pointer-events:none;color:#d77da0;opacity:.65;animation:twinkle 3s ease-in-out infinite}
+.s1{top:8%;left:9%}.s2{top:17%;right:10%;animation-delay:1s}.s3{bottom:12%;left:13%;animation-delay:1.8s}.s4{bottom:8%;right:12%;animation-delay:.5s}
+@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0);opacity:.35}50%{transform:scale(1.2) rotate(20deg);opacity:.9}}
+.stage{width:min(760px,100%);text-align:center}
+.intro{margin:0 0 18px;color:#a7426c;font-size:clamp(1.5rem,5vw,2.15rem);font-weight:normal}
+.hint{margin:0 0 24px;color:#986078;font-size:1rem}
+.envelope-button{display:block;width:min(360px,88vw);height:245px;margin:0 auto 24px;position:relative;border:0;background:transparent;cursor:pointer;perspective:900px;filter:drop-shadow(0 14px 18px #b75b8125);transition:transform .25s}
+.envelope-button:hover{transform:translateY(-4px)}
+.envelope{position:absolute;inset:48px 0 0;height:190px;background:#f8b9d0;border-radius:8px 8px 14px 14px;overflow:visible}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#f9c8da,#ee9fbd);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px 8px 14px 14px}
+.flap{position:absolute;z-index:4;left:0;right:0;top:48px;height:112px;background:#fbd0df;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .85s cubic-bezier(.2,.75,.2,1);filter:drop-shadow(0 3px 2px #c66b8c22)}
+.letter-peek{position:absolute;z-index:2;left:7%;width:86%;height:160px;top:30px;padding:17px 10px;background:#fffafc;border-radius:5px;box-shadow:0 3px 8px #a54e7020;transition:transform .85s cubic-bezier(.2,.75,.2,1),top .85s;display:flex;align-items:center;justify-content:center;color:#c45e88;font-size:1rem;font-style:italic}
+.front-heart{position:absolute;z-index:5;left:50%;top:108px;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#fff0f6;color:#c74e80;font-size:29px;box-shadow:0 3px 10px #b95a7c25;transition:opacity .3s,transform .3s}
+.envelope-button.opening .flap{transform:rotateX(180deg);z-index:1}
+.envelope-button.opening .letter-peek{top:-5px;transform:translateY(-80px);z-index:6}
+.envelope-button.opening .front-heart{opacity:0;transform:translateX(-50%) scale(.5)}
+.envelope-button:focus-visible{outline:3px solid #b84f79;outline-offset:8px;border-radius:14px}
+.opened-card{display:none;text-align:left;padding:clamp(23px,5vw,48px);border:1px solid #b84f7930;border-radius:22px;background:var(--paper);box-shadow:0 18px 55px #8e436220;animation:appear .9s ease both}
+.opened-card.visible{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+.date,.reason,.card-title,.signature,.ornament,.heart{text-align:center}
+.date{color:var(--rose);letter-spacing:.12em;text-transform:uppercase;font:700 .78rem/1.5 Arial,sans-serif}
+.card-title{margin:12px 0 8px;font-size:clamp(1.7rem,5vw,2.45rem);font-weight:normal;color:#a7426c;line-height:1.2}
+.reason{margin:0 0 27px;color:#b35d80;font-style:italic}
+.ornament{margin-bottom:26px;color:#d889a9;letter-spacing:.45em}
+.opened-card p{margin:0 0 1.1em;font-size:clamp(1.01rem,2.5vw,1.1rem);line-height:1.9}
+.signature{margin-top:28px;color:#a7426c;font-size:1.06rem;line-height:1.8;font-style:italic}
+.heart{margin-top:22px;color:#d66d98;font-size:1.35rem;letter-spacing:.35em}
+.again{display:block;margin:20px auto 0;border:1px solid #d98bab;border-radius:999px;background:#fff7fa;color:#a7426c;padding:10px 17px;font-size:.95rem;cursor:pointer}
+.again:hover{background:#ffe8f0}
+.hidden{display:none!important}
+@media(max-width:480px){body{padding:16px 9px}.envelope-button{height:225px}.envelope{height:174px}.flap{height:103px}.letter-peek{height:146px}.opened-card{border-radius:17px}.opened-card p{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="sparkle s1">✧</div><div class="sparkle s2">✦</div><div class="sparkle s3">✧</div><div class="sparkle s4">✦</div>
+<main class="stage">
+  <section id="cover">
+    <h1 class="intro">Hay una cartita para ti, mi amor 💌</h1>
+    <p class="hint">La escribí pensando en ti. Toca el sobre para abrirla. ♡</p>
+    <button class="envelope-button" id="openLetter" aria-label="Abrir la carta" aria-expanded="false">
+      <span class="envelope">
+        <span class="letter-peek">Un pedacito de mi corazón<br>escrito para ti… ♡</span>
+      </span>
+      <span class="flap"></span>
+      <span class="front-heart">♥</span>
+    </button>
+    <p class="hint" id="littleHint">Con todo mi amor, para mi bubu. 🌷</p>
+  </section>
+
+  <article class="opened-card" id="letterContent">
+    <div class="date">14 de octubre</div>
+    <h2 class="card-title">Tus ojitos hermosos 👀❤️</h2>
+    <div class="reason">Cuarta cartita: las ventanas de tu alma ♡</div>
+    <div class="ornament">✧ ♡ ✧</div>
+    <p>Hola, amor mío.</p>
+    <p>Hoy hablaré de tus ojitos hermosos. Esos ojos que me recuerdan a dos grandes soles. Son de un café intenso, pero aun así son capaces de brillar con un esplendor que derrite mi corazón. Hay momentos en los que me distraigo mientras veo tus ojos. Pareciera que todo el ruido de alrededor desaparece repentinamente y solo somos tú y yo, en un momento tan mágico que surge de un detalle que pareciera insignificante a simple vista.</p>
+    <p>Puedo ver a través de tus ojos y noto cómo me miras con tanto amor, cariño y deseo, tanto como yo te miro a ti. Si gustas saberlo, una de las maneras de ponerme nervioso es simplemente que me observes. Con eso basta para sobrecargar mis sentidos y causar una reacción de pena, pues, siendo sincero, se siente como si esos ojos observaran lo más profundo de mi ser, como si mi alma estuviera desnuda ante tu mirada. Y comienza a sentirse como un momento íntimo y lleno de emociones puras.</p>
+    <p>Tus ojos, tus ojos son tan preciosos en cada momento. Cuando te pones tímida, comienzas a verme con un semblante tan suave y tierno; después, comienzas a mirar hacia otros lados, como buscando desviar la atención. Cuando lloras, verte así despierta algo muy profundo en mí, pues es como admirar a un ángel en uno de sus momentos más vulnerables. Ver cómo tus mejillas se humedecen hace que desee darte mi mano para limpiarlas y después secar con mucha delicadeza esos ojos que son uno de mis más grandes tesoros.</p>
+    <p>Cuando te concentras y ves hacia otro lado sin parpadear, es casi como si pudiera ver tus pensamientos a través de tus ojos, como si fueran ventanas hacia tu subconsciente y yo fuera un niño chismoso que adora mirar a través de ellas.</p>
+    <p>Si deseas cautivar mi atención, no me mires mientras hablas, ya que me perderé en tu mirada y solo eso me importará.</p>
+    <p>Amor, verte cuando estás cansada, ver esos ojitos entrecerrados, relajados, despierta en mí una necesidad de abrazarte y recostarte en mi regazo, para ver cómo esos ojitos se cierran y descansan después de haber contemplado el mundo que te rodea.</p>
+    <p>Por esta y muchas más razones, amo hacer videollamadas, porque soy adicto a verte, a ver cómo reaccionas y cómo te expresas cuando hablas. Es un deleite visual para mí.</p>
+    <p>Y, amor mío, justo tuvimos una conversación antes de que te durmieras. Dios, te imaginé acostada a mi lado mientras te acariciaba y te leía un cuento al oído para que durmieras bien. Lo imaginé con tanta claridad que sentí como si realmente lo hubiera vivido. Y puedo decirte que se sintió como nunca antes había sentido en toda mi vida. Fue una emoción tan grande, amor, que me dieron ganas de llorar. Mi alma se desbordó de amor. Esa es la mejor forma de decirlo.</p>
+    <p>No sé cómo explicarte lo que sentí en ese momento. Fue como si, por un instante, mi corazón hubiera dejado de imaginar lo mucho que desea estar contigo y me hubiera permitido sentirlo de verdad. Pude imaginarte a mi lado, sentir la ternura de ese momento y desear que algún día ya no tengamos que conformarnos con imaginar estas pequeñas cosas, porque podremos vivirlas juntos.</p>
+    <p>Y así, cariño, concluye la cuarta cartita, con palabras y sentimientos salidos desde lo más profundo de mi corazón.</p>
+    <div class="signature">Att.: Tu niño. ❤️</div>
+    <div class="heart">♡ ✧ ♡</div>
+    <button class="again" id="closeLetter">Volver a ver el sobre 💌</button>
+  </article>
+</main>
+<script>
+const cover = document.getElementById('cover');
+const opener = document.getElementById('openLetter');
+const content = document.getElementById('letterContent');
+const hint = document.getElementById('littleHint');
+let isOpen = false;
+opener.addEventListener('click', () => {
+  if (isOpen) return;
+  isOpen = true;
+  opener.classList.add('opening');
+  opener.setAttribute('aria-expanded', 'true');
+  hint.textContent = 'Abriendo una cartita hecha con amor… ♡';
+  window.setTimeout(() => {
+    cover.classList.add('hidden');
+    content.classList.add('visible');
+    content.scrollIntoView({behavior:'smooth',block:'start'});
+  }, 950);
+});
+document.getElementById('closeLetter').addEventListener('click', () => {
+  content.classList.remove('visible');
+  cover.classList.remove('hidden');
+  opener.classList.remove('opening');
+  opener.setAttribute('aria-expanded', 'false');
+  hint.textContent = 'Con todo mi amor, para mi bubu. 🌷';
+  isOpen = false;
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101b35">
+<title>Cartita 22 · Mi más grande orgullo</title>
+<style>
+:root{--navy:#101b35;--navy2:#1b2b4d;--cream:#f7f1e5;--paper:#fffdf7;--gold:#c39a51;--gold-light:#ead7a9;--ink:#263149;--muted:#727783}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 12%,#fffdf8 0,#eee5d3 48%,#d8cfbf 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#9a7b45 .7px,transparent .7px);background-size:17px 17px}
+.stage{min-height:100vh;display:grid;place-items:center;padding:42px 20px;position:relative;isolation:isolate}.sparkle{position:fixed;color:#b48a40;opacity:.56;animation:twinkle 3.4s ease-in-out infinite}.s1{top:12%;left:9%;font-size:22px}.s2{top:21%;right:12%;font-size:15px;animation-delay:1s}.s3{bottom:13%;left:15%;font-size:16px;animation-delay:1.8s}.s4{bottom:17%;right:8%;font-size:22px;animation-delay:.6s}@keyframes twinkle{50%{opacity:.2;transform:scale(.78) rotate(20deg)}}
+.shell{width:min(100%,900px);position:relative}.eyebrow{text-align:center;color:#876c3e;font:600 11px/1.5 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;margin:0 0 18px}
+.invite{position:relative;overflow:hidden;text-align:center;padding:clamp(34px,7vw,72px) 20px clamp(38px,7vw,68px);min-height:480px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#182644,#0e1830 65%,#1b2a49);border:1px solid #d5b86f;box-shadow:0 26px 75px #16213a35,inset 0 0 0 8px #101b35,inset 0 0 0 9px #b99555;transition:opacity .65s,transform .8s cubic-bezier(.2,.8,.2,1),filter .7s}
+.invite:before,.invite:after{content:"✦";position:absolute;color:#d5b86f;font-size:20px}.invite:before{left:25px;top:24px}.invite:after{right:25px;bottom:24px}.rule{width:76px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto}.cap{width:84px;height:65px;margin-bottom:13px;color:var(--gold-light);filter:drop-shadow(0 4px 14px #c39a5150)}.invite .small{font:600 10px Arial,sans-serif;letter-spacing:.28em;color:#e5d4aa;text-transform:uppercase}.invite h1{font-size:clamp(35px,7vw,64px);line-height:1.03;font-weight:400;color:#fff9eb;margin:14px 0 0}.invite .subtitle{font-size:clamp(16px,3vw,22px);font-style:italic;color:#d9c99f;margin:12px 0 0}.seal{position:absolute;left:50%;bottom:-33px;transform:translateX(-50%);z-index:3;border:1px solid #b48b45;border-radius:50%;width:67px;height:67px;background:var(--cream);display:grid;place-items:center;color:#9b7535;font:24px Georgia;box-shadow:0 5px 16px #1b25402a}
+.opening{margin:53px auto 0;display:block;border:1px solid #d8bd7d;background:var(--cream);color:#263149;border-radius:3px;padding:14px 23px;cursor:pointer;font:600 11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 7px 20px #17223a20;transition:transform .2s,background .2s}.opening:hover{transform:translateY(-2px);background:#fffaf0}.opening:focus-visible{outline:3px solid #c39a51;outline-offset:4px}.hint{text-align:center;font:12px Arial,sans-serif;color:#676c77;margin:13px 0 0}
+.letter{display:none;opacity:0;transform:translateY(28px) scale(.985);background:var(--paper);border:1px solid #ddc98f;box-shadow:0 26px 70px #15213b30;padding:clamp(28px,7vw,66px);position:relative}.letter:before{content:"";position:absolute;inset:10px;border:1px solid #e8ddc2;pointer-events:none}.letter-top{text-align:center;position:relative}.mini-cap{width:49px;height:37px;color:#a17b37}.letter .label{font:600 9px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8a7043;margin:9px 0}.letter h2{font-size:clamp(26px,4vw,39px);font-weight:400;color:var(--navy);line-height:1.15;margin:12px 0}.letter .ornament{color:#bf974c;font-size:18px;letter-spacing:.5em;margin:12px 0 27px}.copy{position:relative;max-width:660px;margin:auto;font-size:clamp(16px,2.1vw,19px);line-height:1.85}.copy p{margin:0 0 18px}.copy .hello{color:#162644}.copy .shout{font-weight:bold;color:#17284b}.signoff{margin-top:28px!important}.signature{font-style:italic;color:#17284b;font-size:1.12em}.footer-mark{text-align:center;color:#a77e38;font-size:18px;margin:29px 0 0;position:relative}.back{display:block;margin:26px auto 0;background:none;border:0;color:#6c624e;font:600 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.15em;cursor:pointer;padding:9px}.back:hover{color:#15213b}
+.is-open .invite{opacity:0;transform:translateY(-22px) scale(.97);filter:blur(3px);pointer-events:none}.is-open .letter{display:block;animation:letter-in .85s .18s forwards}@keyframes letter-in{to{opacity:1;transform:translateY(0) scale(1)}}.is-open .seal,.is-open .opening,.is-open .hint{display:none}
+@media(max-width:560px){.stage{padding:28px 14px}.invite{min-height:430px}.letter{padding:30px 23px}.letter:before{inset:7px}.copy{line-height:1.76}.s1{left:4%;top:7%}.s2{right:4%;top:13%}.s3{left:5%;bottom:7%}.s4{right:4%;bottom:8%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<span class="sparkle s1" aria-hidden="true">✦</span><span class="sparkle s2" aria-hidden="true">✧</span><span class="sparkle s3" aria-hidden="true">✧</span><span class="sparkle s4" aria-hidden="true">✦</span>
+<main class="stage"><div class="shell" id="keepsake">
+<p class="eyebrow">Un recuerdo para guardar · 22</p>
+<section class="invite" aria-label="Portada del recuerdo de graduación">
+<svg class="cap" viewBox="0 0 100 76" fill="none" aria-hidden="true"><path d="M5 26 50 7l45 19-45 20L5 26Z" stroke="currentColor" stroke-width="2.5"/><path d="M22 34v17c16 12 40 12 56 0V34M94 27v24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="94" cy="55" r="3" fill="currentColor"/><path d="M94 51v13" stroke="currentColor" stroke-width="2"/></svg>
+<div class="small">Con todo mi orgullo y amor</div><div class="rule"></div><h1>El orgullo de<br>verte llegar tan lejos</h1><p class="subtitle">Un logro tuyo, una alegría inmensa para mí</p><div class="rule"></div><div class="small">Para mi cajerita bancaria</div>
+</section><div class="seal" aria-hidden="true">♥</div>
+<button class="opening" id="open" type="button" aria-expanded="false">Abrir este recuerdo <span aria-hidden="true"> ✦</span></button><p class="hint">Toca para descubrir tu cartita</p>
+<article class="letter" id="letter" aria-label="Carta número 22">
+<header class="letter-top"><svg class="mini-cap" viewBox="0 0 100 76" fill="none" aria-hidden="true"><path d="M5 26 50 7l45 19-45 20L5 26Z" stroke="currentColor" stroke-width="3"/><path d="M22 34v17c16 12 40 12 56 0V34M94 27v24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="94" cy="55" r="4" fill="currentColor"/></svg><p class="label">Una celebración de tu esfuerzo</p><h2>Cartita número 22:<br>Mi más grande orgullo ❤️</h2><div class="ornament" aria-hidden="true">✦ · ✦ · ✦</div></header>
+<div class="copy">
+<p class="hello">Hola, amor mío. ❤️</p>
+<p>Para cuando recibas esta carta, será un día muy especial: ¡tu graduación del curso de cajera bancaria!</p>
+<p>Quiero que sepas que estoy jodidamente orgulloso de este gran paso que has logrado. <span class="shout">¡YA PUEDES EJERCER EN UN BANCOOOOO!</span> No dimensionas la felicidad que siento por esta noticia. <span class="shout">¡DIOS, AMOR, REPITO, YA TE GRADÚAAAAAS! JAJSJSJS.</span></p>
+<p>Quiero estar contigo el resto de nuestras vidas para presenciar muchos más eventos tan importantes como este, verte cumplir tus metas y celebrar cada uno de tus logros. Me hace inmensamente feliz saber que estás avanzando y que todo ese esfuerzo te está llevando a conseguir cosas tan bonitas.</p>
+<p>También quiero que sepas que, a pesar de todos estos tropiezos que hemos tenido debido al estrés y a tantas cosas que están pasando en tu vida, mi amor por ti sigue siendo igual de denso e inmenso que el día en que te conocí.</p>
+<p>Eres mi más grande orgullo, corazón mío. Y aunque siento que no he sido de gran ayuda en algunos momentos, quiero que sepas que eso no cambia mis ganas de estar a tu lado. No importa qué pase, siempre buscaremos una forma de solucionarlo, paso a paso y juntos.</p>
+<p>Disfruta muchísimo este día, mi niña. Te mereces sentirte orgullosa de ti misma, porque esto es algo que has conseguido con tu esfuerzo. Ojalá pudiera estar ahí para celebrarlo contigo y decirte personalmente lo orgulloso que estoy de ti.</p>
+<p class="shout">TE AMO DEMASIADO, MI CAJERITA BANCARIAAAAA. ❤️</p>
+<p class="signoff">Con mi más sincero y puro amor,<br><span class="signature">Tu niño. ❤️</span></p>
+</div><div class="footer-mark" aria-hidden="true">✧</div><button class="back" id="close" type="button">Volver a la portada</button>
+</article>
+</div></main>
+<script>
+const keepsake=document.getElementById('keepsake');const openButton=document.getElementById('open');const closeButton=document.getElementById('close');
+openButton.addEventListener('click',()=>{keepsake.classList.add('is-open');openButton.setAttribute('aria-expanded','true');setTimeout(()=>document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'start'}),220)});
+closeButton.addEventListener('click',()=>{keepsake.classList.remove('is-open');openButton.setAttribute('aria-expanded','false');document.querySelector('.stage').scrollIntoView({behavior:'smooth',block:'start'});openButton.focus()});
+</script>
+</body>
+</html>
